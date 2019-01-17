@@ -2,10 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.2</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\app.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\js\app.ts" />
   </ItemGroup>
 
 </Project>
